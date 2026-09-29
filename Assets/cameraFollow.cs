@@ -2,7 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class cameraFollow : MonoBehaviour
+public class CameraFollow : MonoBehaviour
 {
 	[SerializeField]
 	private GameObject target;
@@ -18,9 +18,8 @@ public class cameraFollow : MonoBehaviour
 	void Update()
 	{
 		targetPosition = target.transform.position;
-		targetPosition.y = 0;
 		targetPosition.z = -10;
 
-		transform.position = Vector3.Lerp(transform.position, targetPosition, 0.001f);
+		transform.position = Vector3.Lerp(transform.position, targetPosition, 0.01f);
 	}
 }

@@ -1,8 +1,8 @@
-using System;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEditor.Experimental.GraphView;
+
 using UnityEngine.InputSystem;
-public class player : MonoBehaviour
+public class Player : MonoBehaviour
 {
 	[SerializeField]
 	float moveForce = 10f;
@@ -36,7 +36,7 @@ public class player : MonoBehaviour
 		movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 		if (onFloor)
 		{
-			if (Math.Abs(movement.x) < 0.4f || movement.x * rigidbody2D.linearVelocityX < 0)
+			if (Mathf.Abs(movement.x) < 0.4f || movement.x * rigidbody2D.linearVelocityX < 0)
 			{
 				rigidbody2D.linearDamping = linearDamping;
 			}
@@ -50,26 +50,33 @@ public class player : MonoBehaviour
 		{
 			rigidbody2D.gravityScale = gravityScale;
 			rigidbody2D.linearDamping = linearDamping * 0.15f;
-			if (rigidbody2D.linearVelocityY < 0)
-			{
-				rigidbody2D.gravityScale = gravityScale * fallMultiplier;
-			}
-			if (rigidbody2D.linearVelocityY > 0 && !Input.GetKey(KeyCode.Space))
-			{
-				rigidbody2D.gravityScale = gravityScale * (fallMultiplier / 2);
-			}
+			//if (rigidbody2D.linearVelocityY < 0)
+			//{
+			//	rigidbody2D.gravityScale = gravityScale * fallMultiplier;
+			//}
+			//if (rigidbody2D.linearVelocityY > 0 && !Input.GetKey(KeyCode.Space))
+			//{
+			//	rigidbody2D.gravityScale = gravityScale * (fallMultiplier / 2);
+			//}
 		}
 
-
-		if (onFloor && Input.GetKeyDown(KeyCode.Space))
+		if (onFloor && (Input.GetKeyDown(KeyCode.Space)) || Input.GetKeyDown(KeyCode.W))
 		{
 			Jump();
 		}
+		
 	}
 	void FixedUpdate()
 	{
 		onFloor = IsOnFloor();
-		HorizontalMovement(movement.x);
+		if(onFloor) {
+			if (rigidbody2D.linearVelocityY < 0) {
+				rigidbody2D.linearVelocityY = 0;
+			}
+		}
+
+
+        HorizontalMovement(movement.x);
 	}
 
 	void HorizontalMovement(float horiziontal)
@@ -101,6 +108,4 @@ public class player : MonoBehaviour
 
 
 	}
-
-
 }

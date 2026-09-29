@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class cameraEnvironment : MonoBehaviour
+public class CameraEnvironment : MonoBehaviour
 {
 	private Camera camera;
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
