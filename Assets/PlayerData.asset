@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f4dafcf35d04541a8db532c9927989, type: 3}
+  m_Name: PlayerData
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerData
+  gravity: 80
+  maxSpeed: 15
+  jumpSpeed: 25
+  groundAccelaration: 3
+  groundDecelaration: 3
+  airAccelaration: 2
+  airDecelaration: 2
+  coyoteTime: 1
+  jumpBufferTime: 1
