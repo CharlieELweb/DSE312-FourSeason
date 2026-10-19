@@ -5,7 +5,7 @@ public class Object : Node2D
 {
 
 	// Update is called once per frame
-	void Update()
+	protected override void FixedUpdate()
 	{
 		if (IsOnFloor())
 		{
