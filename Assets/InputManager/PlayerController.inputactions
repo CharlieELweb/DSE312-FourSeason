@@ -263,6 +263,17 @@
                     "action": "Season",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "c350f36f-2c63-484e-94a4-6cb133bdc536",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Season",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

@@ -9,7 +9,7 @@ public class Object : Node2D
 	{
 		if (IsOnFloor())
 		{
-			rigidbody2D.linearDamping = 50;
+			rigidbody2D.linearDamping = 10;
 		}
 		else
 		{

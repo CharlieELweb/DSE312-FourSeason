@@ -15,6 +15,7 @@ public class Node2D : MonoBehaviour
 
 	protected virtual void FixedUpdate()
 	{
+		IsOnWall();
 		if (IsOnCeiling())
 		{
 			print(rigidbody2D.linearVelocityY);
@@ -28,17 +29,19 @@ public class Node2D : MonoBehaviour
 
 	public bool IsOnFloor()
 	{
-		return BoxCast(Vector2.down, 0.1f, groundLayer);
+		return BoxCast(Vector2.down, 0.1f, groundLayer) != null;
 	}
 	public bool IsOnCeiling()
 	{
-		return BoxCast(Vector2.up, 0.1f, groundLayer);
+		return BoxCast(Vector2.up, 0.1f, groundLayer) != null;
 	}
-
-	public bool BoxCast(Vector2 direction, float distance, LayerMask layer)
+	public bool IsOnWall()
+	{
+		return BoxCast(Vector2.left, 0.1f, groundLayer) != null || BoxCast(Vector2.right, 0.1f, groundLayer) != null;
+	}
+	public RaycastHit2D[] BoxCast(Vector2 direction, float distance, LayerMask layer)
 	{
 		Color debugColor = Color.red;
-		bool result = true;
 		RaycastHit2D[] raycastHit2D = Physics2D.BoxCastAll(
 			boxCollider2D.bounds.center,
 			boxCollider2D.bounds.size,
@@ -49,7 +52,7 @@ public class Node2D : MonoBehaviour
 
 		if (raycastHit2D.Length == 0 || (raycastHit2D.Length == 1 && raycastHit2D[0].collider.gameObject == gameObject))
 		{
-			result = false;
+			raycastHit2D = null;
 			debugColor = Color.green;
 		}
 
@@ -59,11 +62,11 @@ public class Node2D : MonoBehaviour
 			direction,
 			distance,
 			debugColor);
-		return result;
+		return raycastHit2D;
 	}
 	void DrawBox(Vector2 origion, Vector2 size, float angle, Vector2 direction, float distance, Color color)
 	{
-		Debug.DrawRay(origion + size.x * Vector2.left, direction * (size.y + distance), color);
-		Debug.DrawRay(origion + size.x * Vector2.right, direction * (size.y + distance), color);
+		Debug.DrawRay(origion + size.x * Vector2.left / 2, direction * (size.y / 2 + distance), color);
+		Debug.DrawRay(origion + size.x * Vector2.right / 2, direction * (size.y / 2 + distance), color);
 	}
 }
