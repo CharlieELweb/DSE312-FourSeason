@@ -9,21 +9,22 @@ using UnityEngine.Assertions.Must;
 
 public class Player : Node2D
 {
-	enum PlayerState
+	public static event Action<PlayerState> OnPlayerStateEnter, OnPlayerStateExit;
+	public enum PlayerState
 	{
 		Idle,
 		Run,
 		Jump,
 		Fall,
 	}
-	private PlayerState currentPlayerState = PlayerState.Idle;
+	public PlayerState currentPlayerState = PlayerState.Idle;
 
 
 
 	[SerializeField]
 	private PlayerData playerData;
 
-	private bool isOnFloor;
+	public bool isOnFloor;
 
 	private float coyoteTimer = 0;
 	private float jumpBufferTimer = 0;
@@ -137,9 +138,9 @@ public class Player : Node2D
 
 	private void ChangeToState(PlayerState playerState)
 	{
-
+		OnPlayerStateEnter?.Invoke(playerState);
+		OnPlayerStateExit?.Invoke(currentPlayerState);
 		currentPlayerState = playerState;
-		print("To State: " + playerState);
 
 		switch (currentPlayerState)
 		{

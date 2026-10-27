@@ -3,14 +3,14 @@ using UnityEngine;
 public class Node2D : MonoBehaviour
 {
 	public Rigidbody2D rigidbody2D;
-	private BoxCollider2D boxCollider2D;
+	private CapsuleCollider2D capsuleCollider2D;
 	[SerializeField]
 	private LayerMask groundLayer;
 
 	private void Awake()
 	{
 		rigidbody2D = GetComponent<Rigidbody2D>();
-		boxCollider2D = GetComponent<BoxCollider2D>();
+		capsuleCollider2D = GetComponent<CapsuleCollider2D>();
 	}
 
 	protected virtual void FixedUpdate()
@@ -43,8 +43,8 @@ public class Node2D : MonoBehaviour
 	{
 		Color debugColor = Color.red;
 		RaycastHit2D[] raycastHit2D = Physics2D.BoxCastAll(
-			boxCollider2D.bounds.center,
-			boxCollider2D.bounds.size,
+			capsuleCollider2D.bounds.center,
+			capsuleCollider2D.bounds.size - Vector3.one * 0.01f,
 			0f,
 			direction,
 			distance,
@@ -56,8 +56,8 @@ public class Node2D : MonoBehaviour
 			debugColor = Color.green;
 		}
 
-		DrawBox(boxCollider2D.bounds.center,
-			boxCollider2D.bounds.size,
+		DrawBox(capsuleCollider2D.bounds.center,
+			capsuleCollider2D.bounds.size - Vector3.one * 0.01f,
 			0f,
 			direction,
 			distance,

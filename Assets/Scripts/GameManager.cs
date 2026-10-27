@@ -5,12 +5,14 @@ using UnityEngine.Splines.Interpolators;
 
 public class GameManager : MonoBehaviour
 {
+	public static event Action<Season, Season> OnSeasonChanged;
 	public static GameManager Instance { get; private set; }
-	public Season season = Season.Summer;
+	public Season season = Season.Spring;
 	float targetTimeScale = 1.0f;
 	private void Awake()
 	{
 		Instance = this;
+		OnSeasonChanged?.Invoke(Season.Spring, season);
 	}
 
 	public enum Season
@@ -55,6 +57,11 @@ public class GameManager : MonoBehaviour
 
 	public void ChangeToSeason(Season newSeason)
 	{
+		if (season == newSeason)
+		{
+			return;
+		}
+		OnSeasonChanged?.Invoke(season, newSeason);
 		season = newSeason;
 	}
 

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
   gravity: 80
-  maxSpeed: 15
-  jumpSpeed: 25
+  maxSpeed: 20
+  jumpSpeed: 30
   groundAccelaration: 3
   groundDecelaration: 3
   airAccelaration: 2
   airDecelaration: 2
-  coyoteTime: 1
-  jumpBufferTime: 1
+  coyoteTime: 0.1
+  jumpBufferTime: 0.1
