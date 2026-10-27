@@ -19,7 +19,7 @@ public class TilemapVisual : MonoBehaviour
 
 	private void OnDisable()
 	{
-		GameManager.OnSeasonChanged += OnSeasonChanged;
+		GameManager.OnSeasonChanged -= OnSeasonChanged;
 	}
 
 	private void OnSeasonChanged(GameManager.Season oldSeason, GameManager.Season newSeason)
