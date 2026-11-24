@@ -1,44 +1,72 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Background : MonoBehaviour
 {
 
 
 	[Serializable]
-	private struct BackgorundSprite
+	private struct Gradient
 	{
-		public Sprite spring;
-		public Sprite summer;
-		public Sprite autumn;
-		public Sprite winter;
+		public Color top, middle, bottom;
 	}
 
 	[SerializeField]
-	private BackgorundSprite backgorundSprite;
-	private SpriteRenderer spriteRenderer;
-
-	void Awake()
+	private Gradient spring, summer, autumn, winter;
+	private Color top, middle, bottom;
+	private Color targetTop, targetMiddle, targetBottom;
+	[SerializeField] private Material material;
+	private void Start()
 	{
-		spriteRenderer = GetComponent<SpriteRenderer>();
+		OnSeasonChanged(GameManager.Season.Spring, GameManager.Instance.season);
+		top = targetTop;
+		middle = targetMiddle;
+		bottom = targetBottom;
+	}
+	private void OnEnable()
+	{
+		GameManager.OnSeasonChanged += OnSeasonChanged;
 	}
 
-	void Update()
+	private void OnDisable()
 	{
-		switch (GameManager.Instance.season)
+		GameManager.OnSeasonChanged -= OnSeasonChanged;
+	}
+
+	private void OnSeasonChanged(GameManager.Season oldSeason, GameManager.Season newSeason)
+	{
+		switch (newSeason)
 		{
 			case GameManager.Season.Spring:
-				spriteRenderer.sprite = backgorundSprite.spring;
+				targetTop = spring.top;
+				targetMiddle = spring.middle;
+				targetBottom = spring.bottom;
 				break;
 			case GameManager.Season.Summer:
-				spriteRenderer.sprite = backgorundSprite.summer;
+				targetTop = summer.top;
+				targetMiddle = summer.middle;
+				targetBottom = summer.bottom;
 				break;
 			case GameManager.Season.Autumn:
-				spriteRenderer.sprite = backgorundSprite.autumn;
+				targetTop = autumn.top;
+				targetMiddle = autumn.middle;
+				targetBottom = autumn.bottom;
 				break;
 			case GameManager.Season.Winter:
-				spriteRenderer.sprite = backgorundSprite.winter;
+				targetTop = winter.top;
+				targetMiddle = winter.middle;
+				targetBottom = winter.bottom;
 				break;
 		}
+	}
+	void Update()
+	{
+		material.SetColor(Shader.PropertyToID("_ColorTop"), top);
+		material.SetColor(Shader.PropertyToID("_ColorMiddle"), middle);
+		material.SetColor(Shader.PropertyToID("_ColorBottom"), bottom);
+		top = Color.Lerp(top, targetTop, 5 * Time.deltaTime);
+		middle = Color.Lerp(middle, targetMiddle, 5 * Time.deltaTime);
+		bottom = Color.Lerp(bottom, targetBottom, 5 * Time.deltaTime);
 	}
 }

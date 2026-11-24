@@ -1,50 +1,143 @@
+using System;
 using UnityEngine;
 
 public class Node2D : MonoBehaviour
 {
 	public Rigidbody2D rigidbody2D;
-	private CapsuleCollider2D capsuleCollider2D;
+	private BoxCollider2D boxCollider2D;
 	[SerializeField]
 	private LayerMask groundLayer;
+	private float stepHeight = 1.5f;
+	public bool froze;
 
 	private void Awake()
 	{
 		rigidbody2D = GetComponent<Rigidbody2D>();
-		capsuleCollider2D = GetComponent<CapsuleCollider2D>();
+		boxCollider2D = GetComponent<BoxCollider2D>();
 	}
 
 	protected virtual void FixedUpdate()
 	{
-		IsOnWall();
-		if (IsOnCeiling())
+		if (GameManager.Instance.pause || froze)
 		{
-			print(rigidbody2D.linearVelocityY);
+			rigidbody2D.bodyType = RigidbodyType2D.Static;
+
+			return;
 		}
+		rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+		if (GameManager.Instance.isTransition)
+		{
+			return;
+		}
+		// if (IsOnWallRight() && Mathf.Abs(rigidbody2D.linearVelocityY) <= 0.1f)
+		// {
+		// 	float height = GetWallHeight(Vector3.right);
+		// 	if (height <= stepHeight)
+		// 	{
+		// 		transform.position += (height + 0.1f) * Vector3.up + 0.1f * Vector3.right;
+		// 	}
+		// }
+		// if (IsOnWallLeft() && Mathf.Abs(rigidbody2D.linearVelocityY) <= 0.1f)
+		// {
+		// 	float height = GetWallHeight(Vector3.left);
+		// 	if (height <= stepHeight)
+		// 	{
+		// 		transform.position += (height + 0.1f) * Vector3.up + 0.1f * Vector3.left;
+		// 	}
+		// }
+
 	}
 
-	private void TryMoveToSide(float delta, float maxDistance)
+	public Vector3 GetGroundNormalLeft()
 	{
-
+		return GetGroundNormal(Vector3.left);
 	}
 
+	public Vector3 GetGroundNormalRight()
+	{
+		return GetGroundNormal(Vector3.right);
+	}
+	public Vector3 GetWallNormal(Vector3 offset)
+	{
+		Debug.DrawRay(
+			boxCollider2D.bounds.center + (boxCollider2D.bounds.size.y / 2 - 0.1f) * Vector3.down,
+			offset * (boxCollider2D.bounds.size.x / 2 + 0.5f),
+			Color.orange
+		);
+		return Physics2D.Raycast(
+			boxCollider2D.bounds.center + (boxCollider2D.bounds.size.y / 2 - 0.1f) * Vector3.down,
+			offset,
+			boxCollider2D.bounds.size.x / 2 + 0.5f,
+			groundLayer
+		).normal;
+	}
+	public float GetWallHeight(Vector3 offset)
+	{
+		Debug.DrawRay(
+			boxCollider2D.bounds.center + boxCollider2D.bounds.size.y / 2 * Vector3.up + (boxCollider2D.bounds.size.x / 2 + 0.5f) * offset,
+			Vector2.down * (boxCollider2D.bounds.size.y / 2 + 5f),
+			Color.pink
+		);
+		return boxCollider2D.bounds.size.y - Physics2D.Raycast(
+			boxCollider2D.bounds.center + boxCollider2D.bounds.size.y / 2 * Vector3.up + (boxCollider2D.bounds.size.x / 2 + 0.5f) * offset,
+			Vector2.down,
+			boxCollider2D.bounds.size.y / 2 + 5f,
+			groundLayer
+		).distance;
+	}
+	public Vector3 GetGroundNormal(Vector3 offset)
+	{
+		Debug.DrawRay(
+			boxCollider2D.bounds.center + (boxCollider2D.bounds.size.y / 2 - 0.05f) * Vector3.down + (boxCollider2D.bounds.size.x / 2 + 0.1f) * offset,
+			Vector2.down * 0.5f,
+			Color.pink
+		);
+		return Physics2D.Raycast(
+			boxCollider2D.bounds.center + (boxCollider2D.bounds.size.y / 2 - 0.05f) * Vector3.down + (boxCollider2D.bounds.size.x / 2 + 0.1f) * offset,
+			Vector2.down,
+			0.5f,
+			groundLayer
+		).normal;
+	}
+	public GameObject GetFloor()
+	{
+		RaycastHit2D[] raycastHit2D = BoxCast(Vector2.down, 0.1f, groundLayer);
+		if (raycastHit2D.Length > 0)
+		{
+			return raycastHit2D[0].collider?.gameObject;
+		}
+		else
+		{
+			return null;
+		}
+
+	}
 	public bool IsOnFloor()
 	{
-		return BoxCast(Vector2.down, 0.1f, groundLayer) != null;
+		return BoxCast(Vector2.down, 0.1f, groundLayer).Length > 0;
 	}
 	public bool IsOnCeiling()
 	{
-		return BoxCast(Vector2.up, 0.1f, groundLayer) != null;
+		return BoxCast(Vector2.up, 0.1f, groundLayer).Length > 0;
 	}
 	public bool IsOnWall()
 	{
-		return BoxCast(Vector2.left, 0.1f, groundLayer) != null || BoxCast(Vector2.right, 0.1f, groundLayer) != null;
+		return IsOnWallLeft() || IsOnWallRight();
+	}
+	public bool IsOnWallLeft()
+	{
+		return Mathf.Abs(GetWallNormal(Vector2.left).y) < 0.01f && BoxCast(Vector2.left, 0.1f, groundLayer).Length > 0;
+	}
+	public bool IsOnWallRight()
+	{
+		return Mathf.Abs(GetWallNormal(Vector2.right).y) < 0.01f && BoxCast(Vector2.right, 0.1f, groundLayer).Length > 0;
 	}
 	public RaycastHit2D[] BoxCast(Vector2 direction, float distance, LayerMask layer)
 	{
 		Color debugColor = Color.red;
 		RaycastHit2D[] raycastHit2D = Physics2D.BoxCastAll(
-			capsuleCollider2D.bounds.center,
-			capsuleCollider2D.bounds.size - Vector3.one * 0.01f,
+			boxCollider2D.bounds.center,
+			boxCollider2D.bounds.size - Vector3.one * 0.01f,
 			0f,
 			direction,
 			distance,
@@ -52,12 +145,12 @@ public class Node2D : MonoBehaviour
 
 		if (raycastHit2D.Length == 0 || (raycastHit2D.Length == 1 && raycastHit2D[0].collider.gameObject == gameObject))
 		{
-			raycastHit2D = null;
+			raycastHit2D = new RaycastHit2D[0];
 			debugColor = Color.green;
 		}
 
-		DrawBox(capsuleCollider2D.bounds.center,
-			capsuleCollider2D.bounds.size - Vector3.one * 0.01f,
+		DrawBox(boxCollider2D.bounds.center,
+			boxCollider2D.bounds.size - Vector3.one * 0.01f,
 			0f,
 			direction,
 			distance,

@@ -7,6 +7,7 @@ public class Object : Node2D
 	// Update is called once per frame
 	protected override void FixedUpdate()
 	{
+		base.FixedUpdate();
 		if (IsOnFloor())
 		{
 			rigidbody2D.linearDamping = 10;

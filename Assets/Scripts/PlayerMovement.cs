@@ -25,6 +25,7 @@ public class Player : Node2D
 	private PlayerData playerData;
 
 	public bool isOnFloor;
+	public Vector3 groundNormalLeft, groundNormalRight;
 
 	private float coyoteTimer = 0;
 	private float jumpBufferTimer = 0;
@@ -32,6 +33,18 @@ public class Player : Node2D
 
 	private void Update()
 	{
+		if (GameManager.Instance.pause)
+		{
+			return;
+		}
+		if (froze)
+		{
+			return;
+		}
+		if (GameManager.Instance.isTransition)
+		{
+			return;
+		}
 		switch (currentPlayerState)
 		{
 			case PlayerState.Idle:
@@ -74,10 +87,28 @@ public class Player : Node2D
 	protected override void FixedUpdate()
 	{
 		base.FixedUpdate();
+		if (GameManager.Instance.pause)
+		{
+			return;
+		}
+		if (froze)
+		{
+			return;
+		}
 		isOnFloor = IsOnFloor();
+		groundNormalLeft = GetGroundNormalLeft();
+		groundNormalRight = GetGroundNormalRight();
+		if (IsOnWallRight() && InputManager.movement.x > 0 || IsOnWallLeft() && InputManager.movement.x < 0)
+		{
+			rigidbody2D.AddForceX(1000 * InputManager.movement.x);
+		}
 		switch (currentPlayerState)
 		{
 			case PlayerState.Idle:
+				if (groundNormalLeft == groundNormalRight)
+				{
+					rigidbody2D.AddForce(-(groundNormalLeft + groundNormalRight).normalized * 300);
+				}
 				if (!isOnFloor)
 				{
 					StartCoyoteTimer();
@@ -86,6 +117,10 @@ public class Player : Node2D
 				break;
 			case PlayerState.Run:
 				Move(InputManager.movement.x, playerData.groundAccelaration, playerData.groundDecelaration);
+				if (groundNormalLeft == groundNormalRight)
+				{
+					rigidbody2D.AddForce(-(groundNormalLeft + groundNormalRight).normalized * 300);
+				}
 				if (!isOnFloor)
 				{
 					StartCoyoteTimer();
@@ -145,12 +180,17 @@ public class Player : Node2D
 		switch (currentPlayerState)
 		{
 			case PlayerState.Idle:
+				rigidbody2D.linearVelocity = Vector2.zero;
+				// rigidbody2D.bodyType = RigidbodyType2D.Kinematic;
 				break;
 			case PlayerState.Run:
+				// rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
 				break;
 			case PlayerState.Fall:
+				// rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
 				break;
 			case PlayerState.Jump:
+				// rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
 				Jump();
 				break;
 		}
@@ -158,6 +198,10 @@ public class Player : Node2D
 
 	private void HandleGravity(float gravity)
 	{
+		if (froze)
+		{
+			return;
+		}
 		if (!isOnFloor)
 		{
 			rigidbody2D.linearVelocityY -= gravity * Time.deltaTime;
@@ -166,6 +210,14 @@ public class Player : Node2D
 
 	private void Move(float direction, float acceleration, float deceleration)
 	{
+		if (froze)
+		{
+			return;
+		}
+		if (GameManager.Instance.isTransition)
+		{
+			return;
+		}
 		float delta = direction *
 			rigidbody2D.linearVelocityX > 0 ? acceleration : deceleration;
 
@@ -178,17 +230,25 @@ public class Player : Node2D
 
 	private void Jump()
 	{
+		if (GameManager.Instance.isTransition)
+		{
+			return;
+		}
 		coyoteTimer = 0;
 		jumpBufferTimer = 0;
 		if (rigidbody2D.linearVelocityY > 0)
 		{
-			rigidbody2D.linearVelocityY += playerData.jumpSpeed;
+			rigidbody2D.linearVelocityY = playerData.jumpSpeed;
 		}
 		else
 		{
 			rigidbody2D.linearVelocityY = playerData.jumpSpeed;
 		}
-
+		GameObject floor = GetFloor();
+		if (floor != null && floor.CompareTag("Object"))
+		{
+			floor.GetComponent<Rigidbody2D>().AddForceY(-200f, ForceMode2D.Impulse);
+		}
 	}
 
 }

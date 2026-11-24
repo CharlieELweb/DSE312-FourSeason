@@ -18,10 +18,10 @@ public class CameraEnvironment : MonoBehaviour
 		switch (GameManager.Instance.season)
 		{
 			case GameManager.Season.Spring:
-				targetBackgroundColor = Color.darkGreen;
+				targetBackgroundColor = Color.lightSkyBlue;
 				break;
 			case GameManager.Season.Summer:
-				targetBackgroundColor = Color.deepPink;
+				targetBackgroundColor = Color.softRed;
 				break;
 			case GameManager.Season.Autumn:
 				targetBackgroundColor = Color.darkGoldenRod;

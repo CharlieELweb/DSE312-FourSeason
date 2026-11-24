@@ -14,12 +14,19 @@ public class ParticleVisual : MonoBehaviour
 
 	private void OnDisable()
 	{
-		GameManager.OnSeasonChanged += OnSeasonChanged;
+		GameManager.OnSeasonChanged -= OnSeasonChanged;
 	}
 	private void Awake()
 	{
 		particleSystem = GetComponent<ParticleSystem>();
 		particleMaterial = particleSystem.GetComponent<ParticleSystemRenderer>().material;
+		particleMaterial.color = new Color(1, 1, 1, show ? 1 : 0);
+		OnSeasonChanged(GameManager.Season.Spring, GameManager.Instance.season);
+	}
+
+	void Start()
+	{
+		OnSeasonChanged(GameManager.Season.Spring, GameManager.Instance.season);
 	}
 
 	private void Update()

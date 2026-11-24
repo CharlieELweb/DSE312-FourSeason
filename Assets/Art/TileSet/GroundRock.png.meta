@@ -1,0 +1,688 @@
+fileFormatVersion: 2
+guid: 2cbf6bc774aa24ef4a5a979735da7ab5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2891123667774106967
+    second: GroundRock_0
+  - first:
+      213: 3563671681499353274
+    second: GroundRock_1
+  - first:
+      213: -8920697957407308596
+    second: GroundRock_2
+  - first:
+      213: 6559730500395480866
+    second: GroundRock_3
+  - first:
+      213: -2907181408438690055
+    second: GroundRock_4
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GroundRock_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2999c875aa0e7d0800000000000000
+      internalID: -2891123667774106967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab053ef5384b47130800000000000000
+      internalID: 3563671681499353274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc44f2cb870533480800000000000000
+      internalID: -8920697957407308596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2273e5a9228d80b50800000000000000
+      internalID: 6559730500395480866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_4
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe546479ed97a7d0800000000000000
+      internalID: -2907181408438690055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_5
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef55db9f83e55412bae42872a0deafdd
+      internalID: 133735555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bcc2d05761444ea9a4c0c51e857082f
+      internalID: 667357746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_7
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a914ba6ccbc7d4e0988686ea8bdd7387
+      internalID: -438819669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_8
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4256240e4a9ec47ff9ecc4ae39c3f531
+      internalID: -1850056592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_9
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dbaec6905d544a58913dd2330aed866
+      internalID: 582724542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_10
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6cd3be76506460984bfb836b90575e
+      internalID: -1231035095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_11
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5016e3a8829074e859a57b2227561dce
+      internalID: -737803086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08df875d1e3124ffc87475c7accbe136
+      internalID: -1543409369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_13
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b7a777d13aa47bfa7ebc88437d7e69
+      internalID: -15296792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_14
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a59faf64b5ed4ef9b0261f0ce2537f1
+      internalID: -964532177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_15
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4b93d8540154779bceccab46614a2c
+      internalID: 1453619903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e641fc9b847f34fa5905e968d1bf7b0c
+      internalID: -2014016726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_19
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb11eb9c8288444bebc0de626debe897
+      internalID: 1037130631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_20
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac24a9394e2544c9b30d36393afaf63
+      internalID: -1842630373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundRock_21
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b34e88dac6548429e6c01f40bf88eb
+      internalID: -1218932819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8e7ac42b5cb1a4fe583772e317172aae
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":500.0,"y":500.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      GroundRock_0: -2891123667774106967
+      GroundRock_1: 3563671681499353274
+      GroundRock_10: -1231035095
+      GroundRock_11: -737803086
+      GroundRock_12: -1543409369
+      GroundRock_13: -15296792
+      GroundRock_14: -964532177
+      GroundRock_15: 1453619903
+      GroundRock_16: -1347521968
+      GroundRock_17: 1844999750
+      GroundRock_18: -2014016726
+      GroundRock_19: 1037130631
+      GroundRock_2: -8920697957407308596
+      GroundRock_20: -1842630373
+      GroundRock_21: -1218932819
+      GroundRock_22: 1171816170
+      GroundRock_3: 6559730500395480866
+      GroundRock_4: -2907181408438690055
+      GroundRock_5: 133735555
+      GroundRock_6: 667357746
+      GroundRock_7: -438819669
+      GroundRock_8: -1850056592
+      GroundRock_9: 582724542
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -89,7 +89,7 @@ public class PlayerAnimation : MonoBehaviour
 			}
 			sprite.localScale = new Vector3(Mathf.Abs(sprite.localScale.x), sprite.localScale.y, 1);
 		}
-		sprite.localScale = Vector3.Lerp(sprite.localScale, new Vector3(Mathf.Sign(sprite.localScale.x), 1, 1), 0.005f);
+		sprite.localScale = Vector3.Lerp(sprite.localScale, new Vector3(Mathf.Sign(sprite.localScale.x), 1, 1), 0.01f);
 		animator.SetBool("isRunning", Mathf.Abs(rigidbody2D.linearVelocityX) > 1);
 	}
 }

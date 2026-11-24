@@ -167,11 +167,11 @@ TextureImporter:
       name: Right Stick All_0
       rect:
         serializedVersion: 2
-        x: 81
-        y: 81
-        width: 350
-        height: 350
-      alignment: 0
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -185,99 +185,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Right Stick All_1
-      rect:
-        serializedVersion: 2
-        x: 139
-        y: 425
-        width: 233
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8d77358df44063690800000000000000
-      internalID: -7622900578299709480
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Right Stick All_2
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 142
-        width: 81
-        height: 233
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1cbb63149a14e72c0800000000000000
-      internalID: -4432032788086604863
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Right Stick All_3
-      rect:
-        serializedVersion: 2
-        x: 427
-        y: 139
-        width: 81
-        height: 234
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1068bbdb4fbce6db0800000000000000
-      internalID: -4796672301087357439
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Right Stick All_4
-      rect:
-        serializedVersion: 2
-        x: 139
-        y: 4
-        width: 233
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 80ebeb4f3f3d75990800000000000000
-      internalID: -7397210818196095480
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d9d8dc7e8527a4e95932acf1dc0c4f97
     internalID: 0
     vertices: []
     indices: 

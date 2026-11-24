@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6563327959164221260}
   m_Layer: 8
   m_Name: Object
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,7 +50,8 @@ MonoBehaviour:
   rigidbody2D: {fileID: 0}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 832
+  froze: 0
 --- !u!212 &2333681914788250444
 SpriteRenderer:
   serializedVersion: 3
@@ -96,8 +97,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2106023723
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
@@ -123,7 +124,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 5
@@ -147,7 +148,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 780122467227679308}
   m_Enabled: 1
   serializedVersion: 3
-  m_Density: 0.2
+  m_Density: 0.07
   m_Material: {fileID: 6200000, guid: 90babf1de33df4f65a603237e4617c0f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2

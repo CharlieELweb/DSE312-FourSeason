@@ -158,36 +158,14 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Left Stick Left-Right_0
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 142
-        width: 81
-        height: 233
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 63366b0f4d188b890800000000000000
-      internalID: -7442055632658209994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Left Stick Left-Right_1
       rect:
         serializedVersion: 2
-        x: 81
-        y: 81
-        width: 350
-        height: 350
-      alignment: 0
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -201,33 +179,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Left Stick Left-Right_2
-      rect:
-        serializedVersion: 2
-        x: 427
-        y: 139
-        width: 81
-        height: 234
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f5f973307fe7dbbe0800000000000000
-      internalID: -1459871104822173857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7215bfa6ed0c94264ac760e26199df9f
     internalID: 0
     vertices: []
     indices: 

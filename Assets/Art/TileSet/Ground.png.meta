@@ -1,0 +1,688 @@
+fileFormatVersion: 2
+guid: e3895aca5b9e34f2f9b549c61b2a64ba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 726864324433593401
+    second: GroundSpring_0
+  - first:
+      213: -2219217185529494062
+    second: GroundSpring_1
+  - first:
+      213: -3813867208830221839
+    second: GroundSpring_2
+  - first:
+      213: 5345056734169806067
+    second: GroundSpring_3
+  - first:
+      213: -7172332061557874917
+    second: GroundSpring_4
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GroundSpring_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934c4c18047561a00800000000000000
+      internalID: 726864324433593401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d582194ab1c331e0800000000000000
+      internalID: -2219217185529494062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f10a25fafb621bc0800000000000000
+      internalID: -3813867208830221839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f43088c7c47d2a40800000000000000
+      internalID: 5345056734169806067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_4
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f92bb9df1c67c90800000000000000
+      internalID: -7172332061557874917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_5
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c612fb899e524cfe9180d91f9164805
+      internalID: 278840485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f212a7c9c5ba7497fb4110d967ab32f0
+      internalID: 881570154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_7
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1255a9515384b2c8e5af549d523457
+      internalID: -605058337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_8
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7afeffec755384e65b799dc5ba94a7f8
+      internalID: 68861790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_9
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36933897a40434b4badd439885a8c794
+      internalID: 105317890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_10
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae571fa1061b40ce8886048f4e26b8e
+      internalID: -1281037129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_11
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1000
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0976a209f8548108f0161d3f437e88
+      internalID: -2122063846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aad401966d154ea6b4732aecfc1b08f
+      internalID: -1988326726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_13
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c2e0471fdc042da9d995e7ee4664a6
+      internalID: 318350078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_14
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa876c8b5d750415ca5c2ef90500000c
+      internalID: -2090523334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_15
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed8b4db16d274cd39816d6c5a9c814e
+      internalID: 1373467280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7e945cb36084861859315d4dc2c98f
+      internalID: -614436135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_19
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f573828170c674766b50367fdc7d25a5
+      internalID: 532953991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_20
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e096f6d7ea043e6837a17d456bc2c6
+      internalID: -578445835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSpring_21
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 250, y: 250}
+        - {x: -249.99998, y: 250}
+        - {x: -249.99998, y: -249.81685}
+        - {x: 250, y: -249.81685}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7120ef33fb07c422d8dd73195dda5b44
+      internalID: -15595360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 201bf0c75ed9e4cea90345bc50af87de
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":500.0,"y":500.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      GroundSpring_0: 726864324433593401
+      GroundSpring_1: -2219217185529494062
+      GroundSpring_10: -1281037129
+      GroundSpring_11: -2122063846
+      GroundSpring_12: -1988326726
+      GroundSpring_13: 318350078
+      GroundSpring_14: -2090523334
+      GroundSpring_15: 1373467280
+      GroundSpring_16: 62021143
+      GroundSpring_17: -309494896
+      GroundSpring_18: -614436135
+      GroundSpring_19: 532953991
+      GroundSpring_2: -3813867208830221839
+      GroundSpring_20: -578445835
+      GroundSpring_21: -15595360
+      GroundSpring_22: -77268850
+      GroundSpring_3: 5345056734169806067
+      GroundSpring_4: -7172332061557874917
+      GroundSpring_5: 278840485
+      GroundSpring_6: 881570154
+      GroundSpring_7: -605058337
+      GroundSpring_8: 68861790
+      GroundSpring_9: 105317890
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
